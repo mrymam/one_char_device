@@ -1,7 +1,7 @@
 PWD:=$(shell pwd)
 KDIR:=/lib/modules/$(shell uname -r)/build
 
-obj-m+=cdevice.o
+obj-m+=myone.o
 
 EXTRA_CFLAGS = -I$(PWD)/include
 

@@ -5,8 +5,7 @@
 #include <linux/slab.h>
 #include <linux/uaccess.h>
 
-// MODULE_LICENSE("GPL v2");
-MODULE_LICENSE("MIT");
+MODULE_LICENSE("GPL v2");
 
 #define MINOR_BASE	0
 #define MINOR_NUMBER	1
@@ -41,7 +40,7 @@ static ssize_t read_one(struct file *file, char __user *buf,
 
 	int i = 0;
 	while (i < cleared) {
-		buf[i] = 1;
+		buf[i] = ~buf[i];
 		i++;
 	}
 	return cleared;
